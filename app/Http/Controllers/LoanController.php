@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Loan;
 use Illuminate\Http\Request;
+use App\Http\Requests\LoanRequest;
 
 class LoanController extends Controller
 {
@@ -14,7 +15,8 @@ class LoanController extends Controller
      */
     public function index()
     {
-        //
+        $loans = Loan::all();
+        return view('loans.index', compact('loans'));
     }
 
     /**
@@ -24,7 +26,7 @@ class LoanController extends Controller
      */
     public function create()
     {
-        //
+        return view('loans.create');
     }
 
     /**
@@ -33,9 +35,10 @@ class LoanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(LoanRequest $request)
     {
-        //
+        $loan= Loan::create($request->all());
+        return back()->with('status','Registro creado con exito');
     }
 
     /**
@@ -46,7 +49,7 @@ class LoanController extends Controller
      */
     public function show(Loan $loan)
     {
-        //
+        return view('loans.show', compact('loan'));
     }
 
     /**
@@ -57,7 +60,7 @@ class LoanController extends Controller
      */
     public function edit(Loan $loan)
     {
-        //
+        return view('loans.edit',compact('loan'));
     }
 
     /**
@@ -67,9 +70,10 @@ class LoanController extends Controller
      * @param  \App\Loan  $loan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Loan $loan)
+    public function update(LoanRequest $request, Loan $loan)
     {
-        //
+        $loan->update($request->all());
+        return back()->with('status','Registro actualizado con exito');
     }
 
     /**
@@ -80,6 +84,7 @@ class LoanController extends Controller
      */
     public function destroy(Loan $loan)
     {
-        //
+        $loan->delete();
+        return redirect('loans')->with('status','Registro eliminado con exito');
     }
 }

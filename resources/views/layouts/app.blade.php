@@ -36,7 +36,20 @@
                              <li class="nav-item">  
                             <a href=" {{route('clients.index')}} " class="nav-link">Clientes</a>
                             </li>
+                             <li class="nav-item">  
+                            <a href=" {{route('categories.index')}} " class="nav-link">Categorias</a>
+                            </li>
+                             <li class="nav-item">  
+                            <a href=" {{route('books.index')}} " class="nav-link">Libros</a>
+                            </li>
+                             <li class="nav-item">  
+                            <a href=" {{route('loans.index')}} " class="nav-link">Prestamos</a>
+                            </li>
+                             <li class="nav-item">  
+                            <a href=" {{route('details.index')}} " class="nav-link">Detalles</a>
+                            </li>
                     </ul>
+                    
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

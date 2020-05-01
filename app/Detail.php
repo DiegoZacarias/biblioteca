@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Detail extends Model
 {
+	protected $fillable = [
+        'book_id', 'loan_id', 'from_date', 'to_date',
+    ];
     public function books()
     {
     	return $this->belongsTo(Book::class);

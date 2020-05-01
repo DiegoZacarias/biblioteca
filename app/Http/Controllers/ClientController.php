@@ -89,6 +89,6 @@ class ClientController extends Controller
     public function destroy(Client $client)
     {
         $client->delete();
-        return back()->with('status','Registro Eliminado'); 
+        return redirect('clients')->with('status','Registro eliminado con exito');
     }
 }

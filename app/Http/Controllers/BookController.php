@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Book;
 use Illuminate\Http\Request;
+use App\Http\Requests\BookRequest;
 
 class BookController extends Controller
 {
@@ -14,7 +15,8 @@ class BookController extends Controller
      */
     public function index()
     {
-        //
+        $books = Book::all();
+        return view('books.index',compact('books'));
     }
 
     /**
@@ -24,7 +26,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        //
+        return view ('books.create');
     }
 
     /**
@@ -33,9 +35,10 @@ class BookController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BookRequest $request)
     {
-        //
+        $product = Book::create($request->all());
+        return back()->with('status','Registro creado con exito');
     }
 
     /**
@@ -46,7 +49,7 @@ class BookController extends Controller
      */
     public function show(Book $book)
     {
-        //
+        return view('books.show',compact('book'));
     }
 
     /**
@@ -57,7 +60,7 @@ class BookController extends Controller
      */
     public function edit(Book $book)
     {
-        //
+        return view ('books.edit',compact('book'));
     }
 
     /**
@@ -67,9 +70,11 @@ class BookController extends Controller
      * @param  \App\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Book $book)
+    public function update(BookRequest $request, Book $book)
     {
-        //
+        $book->update($request->all());
+
+        return back()->with('status', 'Registro actualizado con exito');
     }
 
     /**
@@ -80,6 +85,7 @@ class BookController extends Controller
      */
     public function destroy(Book $book)
     {
-        //
+        $book->delete();
+        return redirect('books')->with('status','Registro eliminado con exito');
     }
 }
