@@ -100,6 +100,8 @@
                     <p><span style="font-weight: bold;">Email: </span>admin@admin.com</p>
                     <p><span style="font-weight: bold;">Contraseña: </span>123456789</p>
 
+                    <h3>El repositorio de este proyecto: </h3> <p><a href="https://github.com/DiegoZacarias/biblioteca" style="color: white;">https://github.com/DiegoZacarias/biblioteca</a></p>
+
             </div>
         </div>
     </body>
