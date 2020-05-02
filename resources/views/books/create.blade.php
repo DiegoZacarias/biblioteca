@@ -24,11 +24,27 @@
                 </div>
 
 
-                <div class="form-group">
+             <!--   <div class="form-group">
                   <label>Categoria</label>
                   <input type="text" name="category_id" class="form-control" required>  
+                </div>  -->
+
+                
+                <div class="form-group">
+                <label for="exampleFormControlSelect1">Categoria</label>
+                  <select class="form-control" name="category_id" id="exampleFormControlSelect1">
+                    
+                    @foreach($categories as $category)
+                      
+                        <option value="{{$category->id}}" > {{$category->name}} </option>
+                       
+                    @endforeach
+
+                  </select>
                 </div>
 
+
+  
                 <div class="form-group">
                   <label>Nombre</label>
                   <input type="text" name="name" class="form-control" required>  

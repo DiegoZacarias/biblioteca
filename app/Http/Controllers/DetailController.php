@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Detail;
+use App\Loan;
+use App\Book;
 use Illuminate\Http\Request;
 use App\Http\Requests\DetailRequest;
 
@@ -27,7 +29,9 @@ class DetailController extends Controller
      */
     public function create()
     {
-        return view ('details.create');
+        $books = Book::all();
+        $loans = Loan::all();
+        return view ('details.create', compact('books', 'loans'));
     }
 
     /**
@@ -84,7 +88,9 @@ class DetailController extends Controller
      */
     public function edit(Detail $detail)
     {
-        return view ('details.edit', compact('detail'));
+        $books = Book::all();
+        $loans = Loan::all();
+        return view ('details.edit', compact('detail', 'books', 'loans'));
     }
 
     /**

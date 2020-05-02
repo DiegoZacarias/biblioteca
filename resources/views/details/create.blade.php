@@ -16,17 +16,32 @@
                     </div>
                 @endif
               <form action=" {{route('details.store')}} " method="POST" autocomplete="off"> 
-                  
 
-                <div class="form-group">
-                  <label>ID de libro *</label>
-                  <input type="text" name="book_id" class="form-control" required>  
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">ID de libro *</label>
+                  <select class="form-control" name="book_id" id="exampleFormControlSelect1">
+                    
+                    @foreach($books as $book)
+                      
+                        <option value="{{$book->id}}" > {{$book->name}} </option>
+                       
+                    @endforeach
+
+                  </select>
                 </div>
 
 
                 <div class="form-group">
-                  <label>ID del prestamo *</label>
-                  <input type="text" name="loan_id" class="form-control" required>  
+                <label for="exampleFormControlSelect1">ID del prestamo *</label>
+                  <select class="form-control" name="loan_id" id="exampleFormControlSelect1">
+                    
+                    @foreach($loans as $loan)
+                      
+                        <option value="{{$loan->id}}" >ID:{{$loan->id}}  Cliente:{{$loan->client->name}} </option>
+                       
+                    @endforeach
+
+                  </select>
                 </div>
 
                 <div class="form-group">

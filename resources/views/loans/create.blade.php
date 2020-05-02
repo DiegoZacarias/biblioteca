@@ -17,9 +17,22 @@
                 @endif
               <form action=" {{route('loans.store')}} " method="POST" autocomplete="off"> 
 
-                <div class="form-group">
+           <!--     <div class="form-group">
                   <label>Id cliente</label>
                   <input type="text" name="client_id" class="form-control" required>  
+                </div>
+            -->
+                <div class="form-group">
+                <label for="exampleFormControlSelect1">Id cliente</label>
+                  <select class="form-control" name="client_id" id="exampleFormControlSelect1">
+                    
+                    @foreach($clients as $client)
+                      
+                        <option value="{{$client->id}}" > {{$client->name}} </option>
+                       
+                    @endforeach
+
+                  </select>
                 </div>
 
                 <div class="form-group">

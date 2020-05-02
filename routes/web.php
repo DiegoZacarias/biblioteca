@@ -30,3 +30,4 @@ Route::resource('categories','CategoryController');
 Route::resource('loans','LoanController');
 
 Route::resource('details','DetailController');
+

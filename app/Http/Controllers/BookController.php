@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Book;
+use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\BookRequest;
 
@@ -16,6 +17,7 @@ class BookController extends Controller
     public function index()
     {
         $books = Book::all();
+        
         return view('books.index',compact('books'));
     }
 
@@ -26,7 +28,8 @@ class BookController extends Controller
      */
     public function create()
     {
-        return view ('books.create');
+        $categories = Category::all();
+        return view ('books.create', compact('categories'));
     }
 
     /**
@@ -37,6 +40,7 @@ class BookController extends Controller
      */
     public function store(BookRequest $request)
     {
+
         $product = Book::create($request->all());
         return back()->with('status','Registro creado con exito');
     }
@@ -60,7 +64,8 @@ class BookController extends Controller
      */
     public function edit(Book $book)
     {
-        return view ('books.edit',compact('book'));
+        $categories = Category::all();
+        return view ('books.edit',compact('book','categories'));
     }
 
     /**
