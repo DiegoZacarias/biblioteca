@@ -38,7 +38,7 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Cont.</th>
+                            <th>Detalle</th>
                             <th>Codigo del Libro</th>
                             <th>Nombre del Libro</th>
                             <th>Autor</th>
@@ -47,7 +47,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+                       
                         @foreach($details as $detail)
 
                         <tr>
@@ -61,6 +61,7 @@
                         </tr>
                         
                        @endforeach
+  
                     </tbody>
 
 

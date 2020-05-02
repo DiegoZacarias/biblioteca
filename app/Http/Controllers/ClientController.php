@@ -42,7 +42,7 @@ class ClientController extends Controller
 
 
         $client = Client::create($request->all());
-        return back()->with('status', 'Creado con exito');
+        return redirect('clients')->with('status', 'Creado con exito');
     }
 
     /**

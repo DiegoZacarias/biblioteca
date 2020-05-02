@@ -42,7 +42,7 @@ class BookController extends Controller
     {
 
         $product = Book::create($request->all());
-        return back()->with('status','Registro creado con exito');
+        return redirect('books')->with('status','Registro creado con exito');
     }
 
     /**

@@ -40,7 +40,7 @@ class CategoryController extends Controller
     {
        // dd($request);
         $category = Category::create($request->all());
-        return back()->with('status','Registro agregado con exito');
+        return redirect('categories')->with('status','Registro agregado con exito');
     }
 
     /**

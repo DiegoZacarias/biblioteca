@@ -66,7 +66,9 @@ class DetailController extends Controller
 
 
         ]+$request->all());
-        return back()->with('status','Registro creado con exito');
+        return back()->with('status','Ticket de prestamo generado con exito, puede ir a ver en TICKETS DE PRESTAMO/MOSTRAR DETALLES, o simplemente puede agregar mas detalles a su ticket. ***** RECUERDE: SIEMPRE ELEGIR EL ID PRESTAMO *****');
+
+        //return redirect('list')->with('status','Prestamo creado con exito');
     }
 
     /**

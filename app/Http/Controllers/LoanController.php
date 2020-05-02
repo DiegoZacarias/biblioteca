@@ -40,7 +40,9 @@ class LoanController extends Controller
     public function store(LoanRequest $request)
     {
         $loan= Loan::create($request->all());
-        return back()->with('status','Registro creado con exito');
+        return redirect('details/create')->with('status','Prestamo creado con exito, para generar el ticket cree un detalle aqui, agregue los libros y el Id prestamo. ***** RECUERDE: SIEMPRE ELEGIR EL ULTIMO ID PRESTAMO  *****');
+       // return redirect('details/create')->with('status','Cabecera del Prestamos creada');
+
     }
 
     /**

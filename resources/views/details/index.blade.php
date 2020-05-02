@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Detalles de los prestamos
-                    <a href=" {{route('details.create')}} " class="btn btn-sm btn-primary">Crear</a>
+                <div class="card-header" style="display: flex; justify-content: space-around; align-items: center; border: 2px solid rgba(0,0,0,.2);"><h1>Detalles de los prestamos</h1>
+                    <a href=" {{route('details.create')}} " class="btn btn-lg btn-primary">Crear Detalle</a>
                 </div>
 
                 <div class="card-body">
@@ -41,7 +41,7 @@
                                 </a>
                             </td>
                             <td>
-                                <a href=" {{route('details.edit',$detail)}} " class="btn btn-sm btn-primary">
+                                <a href=" {{route('details.edit',$detail)}} " class="btn btn-sm btn-success">
                                     Editar
                                 </a>
                             </td>

@@ -12,7 +12,9 @@ class ListController extends Controller
 {
     public function index()
     {
-    	$loans = Loan::all();
+    	//$loans_latest = Loan::latest()->get();
+        $loans = Loan::all()->sortByDesc('id');
+       // $loans = Loan::all(); //ORIGINAL
     	$details = Detail::all();
     	return view('list.index', compact('loans','details'));
     }
@@ -28,10 +30,13 @@ class ListController extends Controller
 
 			foreach($details as $detail) {
 					$fin=	$detail->id;
+    	$books = Book::where('id','=',$fin)->get(); //COPIADO
 			}
 
-    	$books = Book::where('id','=',$fin)->get();
-    	//dd($fin);
+        //$books = Book::where('id','=',$fin)->get(); //ORIGINAL
+    	
+
+        //dd($fin);
     	
 
     	//dd($loan);

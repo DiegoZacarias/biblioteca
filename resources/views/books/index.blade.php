@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Libros
-                    <a href=" {{route('books.create')}} " class="btn btn-sm btn-primary">Crear</a>
+                <div class="card-header" style="display: flex; justify-content: space-around; align-items: center; border: 2px solid rgba(0,0,0,.2);"> <h1> Libros </h1>
+                    <a href=" {{route('books.create')}} " class="btn btn-lg btn-primary">Agregar nuevo libro</a>
                 </div>
 
                 <div class="card-body">
@@ -41,7 +41,7 @@
                                 </a>
                             </td>
                             <td>
-                                <a href=" {{route('books.edit',$book)}} " class="btn btn-sm btn-primary">
+                                <a href=" {{route('books.edit',$book)}} " class="btn btn-sm btn-success">
                                     Editar
                                 </a>
                             </td>

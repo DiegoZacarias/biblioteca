@@ -5,7 +5,7 @@
   <div class="row justify-content-center">
       <div class="col-md-8">
           <div class="card">
-            <div class="card-header">Nuevo Detalle de prestamo
+            <div class="card-header">Nuevo Detalle de prestamo<br><small>*El ultimo id de prestamo es el cliente que agrego por ultima vez*</small>
                     
             </div>
 
@@ -18,7 +18,7 @@
               <form action=" {{route('details.store')}} " method="POST" autocomplete="off"> 
 
               <div class="form-group">
-                <label for="exampleFormControlSelect1">ID de libro *</label>
+                <label for="exampleFormControlSelect1">Elija el libro que quiere agregar *</label>
                   <select class="form-control" name="book_id" id="exampleFormControlSelect1">
                     
                     @foreach($books as $book)
@@ -32,7 +32,7 @@
 
 
                 <div class="form-group">
-                <label for="exampleFormControlSelect1">ID del prestamo *</label>
+                <label for="exampleFormControlSelect1">ID del prestamo (El cliente que presta el libro) *</label>
                   <select class="form-control" name="loan_id" id="exampleFormControlSelect1">
                     
                     @foreach($loans as $loan)

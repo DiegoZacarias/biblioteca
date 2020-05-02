@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">
-                    {{ config('app.name', 'Laravel') }}
+                  Biblioteca  <!--{{ config('app.name', 'Laravel') }} -->
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,7 @@
                             <a href=" {{route('books.index')}} " class="nav-link">Libros</a>
                             </li>
                              <li class="nav-item">  
-                            <a href=" {{route('loans.index')}} " class="nav-link"> Crear nuevo Prestamos</a>
+                            <a href=" {{route('loans.index')}} " class="nav-link"> Crear nuevo Prestamo</a>
                             </li>
                              <li class="nav-item">  
                             <a href=" {{route('details.index')}} " class="nav-link">Detalles</a>

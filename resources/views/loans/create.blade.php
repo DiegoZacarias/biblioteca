@@ -5,7 +5,7 @@
   <div class="row justify-content-center">
       <div class="col-md-8">
           <div class="card">
-            <div class="card-header">Nuevo Prestamo
+            <div class="card-header">Nuevo Prestamo <br><small>*Por favor acuerdese del cliente que elije, para luego llamarlo en el detalle*</small>
                     
             </div>
 

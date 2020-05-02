@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     <h3>Listado de todos los prestamos con sus detalles respectivos</h3>
-                    
+                    <small>** El primer ticket en la lista es el ultimo que se ha generado **</small>
                 </div>
 
                 <div class="card-body">
@@ -28,6 +28,8 @@
                         </tr>
                     </thead>
                     <tbody>
+
+                      
                         @foreach($loans as $loan)
                         <tr>
                             <td> {{$loan->id}} </td>
@@ -45,6 +47,7 @@
                         
                        
                         @endforeach
+                    
                     </tbody>
 
 
