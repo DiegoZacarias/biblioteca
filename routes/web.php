@@ -31,3 +31,6 @@ Route::resource('loans','LoanController');
 
 Route::resource('details','DetailController');
 
+Route::get('/list', 'ListController@index')->name('list');
+
+Route::get('list/{loan}', 'ListController@show')->name('show');

@@ -9,7 +9,7 @@ class Detail extends Model
 	protected $fillable = [
         'book_id', 'loan_id', 'from_date', 'to_date',
     ];
-    public function books()
+    public function book()
     {
     	return $this->belongsTo(Book::class);
     }

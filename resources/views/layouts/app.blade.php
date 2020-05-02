@@ -48,6 +48,9 @@
                              <li class="nav-item">  
                             <a href=" {{route('details.index')}} " class="nav-link">Detalles</a>
                             </li>
+                            <li class="nav-item">  
+                            <a href=" {{ url('/list') }} " class="nav-link">Todos los detalles de prestamos</a>
+                            </li>
                     </ul>
                     
 
