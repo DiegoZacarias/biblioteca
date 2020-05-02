@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Clientes
                     <a href=" {{route('clients.create')}} " class="btn btn-sm btn-primary">Crear</a>
@@ -51,7 +51,7 @@
                                     @method('DELETE')
                                     @csrf
 
-                                    <input type="submit" value="Eliminar" class="btn btn-sm btn-danger" onclick="return confirm('Desea eliminar este cliente?') ">
+                                    <input type="submit" value="Eliminar" class="btn btn-sm btn-danger" onclick="return confirm('Si elimina este archivo se eliminan tambien en cascada los que usan como fk. Desea eliminar de todas formas?') ">
                                     
 
                                 </form>

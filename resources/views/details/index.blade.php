@@ -51,7 +51,7 @@
                                     @method('DELETE')
                                     @csrf
 
-                                    <input type="submit" value="Eliminar" class="btn btn-sm btn-danger" onclick="return confirm('Desea eliminar este detalle del prestamo?') ">
+                                    <input type="submit" value="Eliminar" class="btn btn-sm btn-danger" onclick="return confirm('Si elimina este archivo se eliminan tambien en cascada los que usan como fk. Desea eliminar de todas formas?') ">
                                 </form>
                             </td>
                         </tr>

@@ -21,7 +21,7 @@ class CreateBooksTable extends Migration
             $table->string('name');
             $table->string('writer')->nullable();
 
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
 
 
 

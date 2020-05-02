@@ -25,8 +25,8 @@ class CreateDetailsTable extends Migration
             $table->timestamps();
 
 
-            $table->foreign('book_id')->references('id')->on('books');
-            $table->foreign('loan_id')->references('id')->on('loans');
+            $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
+            $table->foreign('loan_id')->references('id')->on('loans')->onDelete('cascade');
         });
     }
 

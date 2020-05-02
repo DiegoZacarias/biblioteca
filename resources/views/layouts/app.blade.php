@@ -23,7 +23,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/home') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -43,14 +43,12 @@
                             <a href=" {{route('books.index')}} " class="nav-link">Libros</a>
                             </li>
                              <li class="nav-item">  
-                            <a href=" {{route('loans.index')}} " class="nav-link">Prestamos</a>
+                            <a href=" {{route('loans.index')}} " class="nav-link"> Crear nuevo Prestamos</a>
                             </li>
                              <li class="nav-item">  
                             <a href=" {{route('details.index')}} " class="nav-link">Detalles</a>
                             </li>
-                            <li class="nav-item">  
-                            <a href=" {{ url('/list') }} " class="nav-link">Todos los detalles de prestamos</a>
-                            </li>
+                           
                     </ul>
                     
 
@@ -69,6 +67,9 @@
                                 </li>
                             @endif
                         @else
+                         <li class="nav-item">  
+                            <a href=" {{ url('/list') }} " class="nav-link">Tickets de prestamos</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>

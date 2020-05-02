@@ -12,8 +12,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #333333;
+                color: white;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -69,7 +69,7 @@
 
             @if (Route::has('login'))
                 <div class="top-right links">
-                      <a href=" {{route('clients.index')}} ">Clientes</a>
+                      
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
@@ -81,22 +81,25 @@
                     @endauth
                 </div>
             @endif
-
+        
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
-                </div>
+                    Biblioteca
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <br>
                 </div>
+                    <p><span style="font-weight: bold;"> IMPORTANTE:</span> Si es la primera vez que inicias el sistema, no olvides importar la base de datos que se encuentra en la raiz del proyecto <br> o si tenes laravel instalado hacer directamente:<span style="font-weight: bold;"> php artisan migrate:refresh --seed </span></p>
+                    
+                    <p>La conexion a la base de datos se hace en el archivo <span style="font-weight: bold">.env</span> que se encuentra en la raiz del proyecto: </p>
+
+                        <figure><img src="assets/env.png"></figure>
+
+
+
+                    <p>Necesitas iniciar sesion para entrar al crud. <span style="font-weight: bold;">Podes directamente crear una cuenta </span><br>o si utilizaste el scrip <span style="font-weight: bold;">biblioteca.sql</span>, podes ingresar con: </p>
+                    <p><span style="font-weight: bold;">Email: </span>admin@admin.com</p>
+                    <p><span style="font-weight: bold;">Contraseña: </span>123456789</p>
+
             </div>
         </div>
     </body>

@@ -21,16 +21,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('clients','ClientController');
+Route::resource('clients','ClientController')->middleware('auth');
 
-Route::resource('books','BookController');
+Route::resource('books','BookController')->middleware('auth');
 
-Route::resource('categories','CategoryController');
+Route::resource('categories','CategoryController')->middleware('auth');
 
-Route::resource('loans','LoanController');
+Route::resource('loans','LoanController')->middleware('auth');
 
-Route::resource('details','DetailController');
+Route::resource('details','DetailController')->middleware('auth');
 
-Route::get('/list', 'ListController@index')->name('list');
+Route::get('/list', 'ListController@index')->name('list')->middleware('auth');
 
-Route::get('list/{loan}', 'ListController@show')->name('show');
+Route::get('list/{loan}', 'ListController@show')->name('show')->middleware('auth');
